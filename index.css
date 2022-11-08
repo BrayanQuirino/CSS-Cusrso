@@ -2,21 +2,64 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .box{
-    overflow: hidden;
-    border: 1px solid black;
-    padding: 10px 10px;
-    margin: 5px 5px;
-    width: 200px;
-    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid transparent;
+    margin: 50px;
+    box-shadow: 6px 6px 6px #000000;
+    border-radius: 10px;
+    border: 1px solid black
 }
 
-.box1{
-    background: steelblue;
+.sigIn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid transparent;
+    margin: 0px 0px 50px 0px;
 }
 
-.box2{
-    background: tomato;
+img{
+    display: block;
+    width: 400px;
+    height: 400px;
+    margin: 10px auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.login{
+    display: block;
+    color: rgb(148, 3, 148);
+    padding: 10px 20px;
+    margin: 10px 0px;
+    text-decoration: none;
+    border: 1px solid rgb(148, 3, 148);
+    border-radius: 5px;
+    width: 150px;
+}
+
+.login:hover{
+    color: white;
+    background-color: rgb(148, 3, 148);
+    transition: .5s;
+    border-color: white;
+}
+
+.name{
+    padding: 20px 0px;
+    margin: 0px 0px;
 }

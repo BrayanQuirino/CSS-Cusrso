@@ -11,4 +11,15 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+
+    width: 350px;
+    height: 350px;
+    margin: 30px auto;
+    /*background: hsl(hue, saturation, lightness);*/
+    background: hsl(7, 74%, 41%);
+    /*background-image: url(path/path), url(path/path)*/
+    background-image: url(./img/flash.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }

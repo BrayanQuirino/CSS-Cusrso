@@ -5,21 +5,32 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+body{
+    height: 700px;
+}
+
 .container{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+h2{
+    color: white;
     text-align: center;
+    margin: 120px auto;
+}
 
-    width: 350px;
-    height: 350px;
-    margin: 30px auto;
-    /*background: hsl(hue, saturation, lightness);*/
-    background: hsl(7, 74%, 41%);
-    /*background-image: url(path/path), url(path/path)*/
-    background-image: url(./img/flash.png);
-    background-repeat: no-repeat;
+.attachment{
+    background-image: linear-gradient(220deg, rgba(2, 0, 36, 0.484) 0%, rgba(9, 9, 121, 0.534) 35%, rgba(0, 213, 255, 0.489) 100%), url(./img/office.jpg);
     background-position: center;
     background-size: cover;
+    width: 300px;
+    height: 300px;
 }
+
+/*Efecto heroe*/
+
+.fixed{
+    background-attachment: fixed;
+}
+

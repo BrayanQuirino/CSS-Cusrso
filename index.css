@@ -7,66 +7,53 @@
     font-size: 1rem;
 }
 
-:root{
-    background-color: salmon;
+body{
+    height: 800px;
 }
 
-.card{
-    max-width: 300px;
+.container{
+    height: 530px;
+    width: 450px;
     margin: 20px auto;
-    border: 1px solid white;
-    border-radius: 5px;
-    box-shadow: 6px 6px 6px rgba(255, 255, 255, 0.507);
-    overflow: hidden;
-    color: salmon;
-    background-color: white;
+    border: 2px solid crimson;
 }
 
-.card_title{
-    padding: 20px 20px 10px 0px;
-    margin: 1.2em;
-    text-align: left;
-    border-bottom: 2px solid salmon;
-
-}
-
-.card_text{
-    margin: 1.2em;
-}
-
-.card_text::selection{
-    background-color: salmon;
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: steelblue;
     color: white;
-}
-
-.card_text::first-letter{
-    font-size: 3em;
-}
-
-ul{
-    list-style: none;
-    counter-reset: contador;
-    margin: 5px 0px;
-    padding: 10px;
-}
-
-
-li{
-    margin: 5px 0px;
-    padding: 5px;
-}
-
-li::before{
-    content: counter(contador);
-    counter-increment: contador;
-    display: inline-block;
-    vertical-align: middle;
-    background-color: salmon;
-    color: white;
-    height: 1.5em;
-    width: 1.5em;
-    border-radius: 50%;
     text-align: center;
-    margin-right: 5px;
-    font-size: 1em;
+    line-height: 100px;
+    margin: 20px;
+}
+
+
+.static{
+    position: static;
+}
+
+.relative{
+    /*Se desplaza de acuerdo a su posicion original,es decir
+    es relativo a su posicion inicial.*/
+    position: relative;
+}
+
+/**
+* La diferencia entre absolute y fixed
+* es que el segundo siempre se posiciona al viewport o el html
+* en cambio absolute lo hace al padre posicionado o en su caso 
+* al body.
+*/
+
+.absolute{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.fixed{
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }

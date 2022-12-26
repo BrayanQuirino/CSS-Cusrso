@@ -7,53 +7,50 @@
     font-size: 1rem;
 }
 
-body{
-    height: 800px;
-}
-
 .container{
-    height: 530px;
-    width: 450px;
-    margin: 20px auto;
-    border: 2px solid crimson;
-}
-
-.box{
-    width: 100px;
-    height: 100px;
-    background-color: steelblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 150vh;
+    background-image: linear-gradient(220deg, rgba(2, 0, 36, 0.484) 0%, rgba(9, 9, 121, 0.534) 35%, rgba(0, 213, 255, 0.489) 100%), url(img/practica.jpg);
+    background-position: center;
+    background-size: cover;
     color: white;
-    text-align: center;
-    line-height: 100px;
-    margin: 20px;
 }
 
-
-.static{
-    position: static;
+.title{
+    font-size: 2.5rem;
+    padding: 1rem;
 }
 
-.relative{
-    /*Se desplaza de acuerdo a su posicion original,es decir
-    es relativo a su posicion inicial.*/
-    position: relative;
+.text{
+    font-size: 1.2em;
+    padding: 0em 1rem 1rem 1rem;
 }
 
-/**
-* La diferencia entre absolute y fixed
-* es que el segundo siempre se posiciona al viewport o el html
-* en cambio absolute lo hace al padre posicionado o en su caso 
-* al body.
-*/
-
-.absolute{
-    position: absolute;
-    top: 0px;
-    right: 0px;
+.enlace{
+    text-decoration: none;
+    color: white;
+    margin: 10px 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px 20px;
 }
 
-.fixed{
+.enlace:hover{
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.wave{
     position: fixed;
+    width: 100%;
+    left: 0;
     bottom: 0;
-    right: 0;
+    z-index: 1;
 }

@@ -10,7 +10,9 @@
 
 
 :root{
-    --color_title: blueviolet;
+    --base-color: #fea540;
+    --gradient: linear-gradient(to right, #fa70997b 0%, #fee14077 100%);
+    --original-gradient: linear-gradient(to right, #fa7099 0%, #fee140 100%);
 }
 
 .container{
@@ -20,7 +22,10 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    background-image: var(--gradient), url(./img/desert.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 
@@ -30,7 +35,7 @@
     justify-content: center;
     align-items: center;
     width: 350px;
-    height: 500px;
+    min-height: 500px;
     border: 1px solid rgba(0, 0, 0, 0.594);
     box-shadow: 6px 6px 10px 1px rgba(0, 0, 0, 0.418);
     padding: 10px 20px;
@@ -38,25 +43,40 @@
     background-color: white;
 }
 
-.card__title{
+
+.input{
+    font-family: inherit;
+    display: block;
+    margin: 10px 0px;
+    padding: 20px 5px;
+    outline: none;
+    width: 100%;
+    border: 1px solid var(--base-color);
+}
+
+.title{
     font-size: 2rem;
     margin: 30px auto;
-    color: var(--color_title);
 }
 
-.card__copy{
-    margin: 0px 0px 30px 0px;
-    text-align: justify;
+.form{
+    min-width: 100%;
 }
 
-.card__cta{
-    padding: 10px 20px;
-    border: 1px solid blueviolet;
-    color: blueviolet;
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 5px auto;
+.form__message{
+    max-width: 300px;
+    min-width: 100%;
+    max-height: 150px;
+    min-height: 150px;
+}
+
+.submit{
+    width: 100%;
+    font-size: 1rem;
+    padding: 15px 30px;
     display: block;
-    text-align: center;
-    width: 150px;
+    border: none;
+    color: white;
+    background-image: var(--original-gradient);
+    cursor: pointer;
 }

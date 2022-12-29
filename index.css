@@ -80,3 +80,23 @@
     background-image: var(--original-gradient);
     cursor: pointer;
 }
+
+
+@media screen and (max-width: 375px) {
+
+    .input{
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .card{
+        width: 90%;
+    }
+    .title{
+        font-size: 1.5rem;
+    }
+
+    .submit{
+        font-size: 16px;
+    }
+}

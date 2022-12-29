@@ -10,9 +10,7 @@
 
 
 :root{
-    --base-color: #fea540;
-    --gradient: linear-gradient(to right, #fa70997b 0%, #fee14077 100%);
-    --original-gradient: linear-gradient(to right, #fa7099 0%, #fee140 100%);
+    --basis-text-color: crimson;
 }
 
 .container{
@@ -22,61 +20,34 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-image: var(--gradient), url(./img/desert.jpg);
+    /* background-image: var(--gradient), url(./img/desert.jpg);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed; */
 }
 
-
-.card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 350px;
-    min-height: 500px;
-    border: 1px solid rgba(0, 0, 0, 0.594);
-    box-shadow: 6px 6px 10px 1px rgba(0, 0, 0, 0.418);
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: white;
-}
-
-
-.input{
-    font-family: inherit;
-    display: block;
-    margin: 10px 0px;
-    padding: 20px 5px;
-    outline: none;
-    width: 100%;
-    border: 1px solid var(--base-color);
-}
 
 .title{
     font-size: 2rem;
-    margin: 30px auto;
+    color: var(--basis-text-color);
 }
 
-.form{
-    min-width: 100%;
+
+@media print{
+    .title{
+        color: steelblue;
+    }
 }
 
-.form__message{
-    max-width: 300px;
-    min-width: 100%;
-    max-height: 150px;
-    min-height: 150px;
+@media screen and (max-width: 600px) {
+    .title{
+        color: white;
+        background-color: black;
+    }
 }
 
-.submit{
-    width: 100%;
-    font-size: 1rem;
-    padding: 15px 30px;
-    display: block;
-    border: none;
-    color: white;
-    background-image: var(--original-gradient);
-    cursor: pointer;
+@media screen and (orientation: landscape) {
+    .title{
+        background-color: black;
+    }
 }

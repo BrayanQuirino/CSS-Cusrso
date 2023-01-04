@@ -29,120 +29,137 @@
     background-attachment: fixed; */
 }
 
+.container_background_white{
+    width: 100%;
+    height: 50%;
+}
+
+.container_background_black{
+    width: 100%;
+    height: 50%;
+    background-color: black;
+}
+
 .cards{
-    width: 100%;
-    height: 100vh;
+    position: fixed;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-
-.card{
-    font-size: 1rem;
-    min-width: 320px;
-    max-width: 320px;
-    min-height: 500px;
-    max-height: 500px;
-    border: 1px solid rgb(194, 194, 194);
-    border-radius: 5px;
-    box-shadow: 3px 3px 6px 6px rgba(194, 194, 194, 0.231);
-    margin: 20px;
-    padding: 20px 20px 0px 20px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.card_image{
-    max-height: 50%;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.summary{
+    background-color: transparent;
     width: 100%;
-    min-height: 100%;
-    padding: 0px 0px 20px 0px;
+    height: 100%;
+}
+
+.cards_card{
+    background-color: white;
+    width: 300px;
+    height: 500px;
+    margin: 0px 30px;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 10px;
+    box-shadow: 0px -3px 3px 1px rgba(209, 209, 209, 0.452);
+
     display: flex;
-    flex-grow: 1;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-.image{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    margin: 0px 0px 0px 0px;
-    width: 100%;
-    height: 30%;
-}
-
-.img{
-    max-height: 150px;
-}
-
-.call_center{
-    background-image: url(./img/call_center.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    padding: 0px;
-    margin: 0px;
-}
-
-.developer{
-    background-image: url(./img/developer.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    padding: 0px;
-    margin: 0px;
-}
-
-.app{
-    background-image: url(./img/app.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    padding: 0px;
-    margin: 0px;
-    max-height: 35%;
-}
-
-
-.summary_title{
-    padding: 10px 0px;
-    margin: 30px 0px 0px 0px;
-    font-size: 1.2rem;
-}
-
-.summary_text{
-    font-size: 1rem;
-    padding: 0px 0px 10px 0px;
 }
 
 .link{
     text-decoration: none;
-    color: var(--color);
-    background-color: var(--button-color);
-    padding: 10px;
+    color: white;
     border: 1px solid transparent;
-    border-radius: 5px;
-    width: 120px;
-    text-align: center;
+    background-color: rgb(8, 11, 25);
+    padding: 15px 20px;
+    border-radius: 30px;
 }
 
 .link:hover{
-    transition: 0.8s;
-    color: var(--button-color);
-    background-color: var(--color);
-    border: 1px solid var(--button-color);
+    color: white;
+    background-color: rgb(35, 102, 225);
+    transition: .5s;
+}
+
+.card_title{
+    font-size: 2.5rem;
+    margin: 30px;
+}
+
+.card_subtitle{
+    margin: 0px 30px;
+}
+
+.card_p{
+    margin: 0px 15px;
+}
+
+.card_list{
+    list-style-type: none;
+    padding: 0px;
+    margin: 15px;
+}
+
+.card_list_item{
+    padding: 10px;
+}
+
+.blue_card{
+    background-color: rgb(35, 102, 225);
+    color: white;
+    border: 1px solid rgb(35, 102, 225);
+}
+
+.blue_card>a{
+    background-color: white;
+    color: black;
+}
+
+.blue_card>a:hover{
+    color: white;
+    background-color: black;
+    transition: .5s;
+}
+
+
+@media screen and (max-width: 780px) and (min-width: 350px) {
+    .cards{
+        position: fixed;
+        flex-direction: column;
+        justify-content: flex-start;
+        top: 0;
+        bottom:0;
+        overflow-y:scroll;
+        overflow-x:hidden;
+        margin: 0;
+        padding: 0;
+    }   
+
+    .cards_card{
+        min-width: 300px;
+        min-height: 500px;
+        margin: 30px 0px;
+    }
+}
+
+
+@media screen and (max-width: 349px) {
+
+    .cards{
+        position: fixed;
+        flex-direction: column;
+        justify-content: flex-start;
+        top: 0;
+        bottom:0;
+        overflow-y:scroll;
+        overflow-x:hidden;
+        margin: 0;
+        padding: 0;
+    }  
+
+    .cards_card{
+        min-width: 200px;
+        min-height: 500px;
+        margin: 30px 0px;
+    }
 }

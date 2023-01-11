@@ -21,9 +21,18 @@
     width: 70%;
     height: 500px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     margin: 20px auto;
+
+
+    /* Intenta rellenar y acomodar lo mejor posible los 
+    items en la grid
+    */
+    grid-auto-flow: dense;
+
+    /* row-gap: 20px;
+    column-gap: 20px ; */
 }
 
 .item{

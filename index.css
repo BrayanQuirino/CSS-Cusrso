@@ -17,56 +17,68 @@
 
 
 .container{
-    outline: 3px solid black;
-    width: 70%;
-    height: 500px;
+    height: 100vh;
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(4, 1fr);
-    margin: 20px auto;
-
-
-    /* Intenta rellenar y acomodar lo mejor posible los 
-    items en la grid
-    */
-    grid-auto-flow: dense;
-
-    /* row-gap: 20px;
-    column-gap: 20px ; */
+    gap: 10px;
+    grid-template-columns: repeat(5, 1fr);    
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+    "header header header header header"
+    "main main main main sidebar"
+    "main main main main sidebar"
+    "main main main main sidebar"
+    "footer footer footer footer footer";
 }
 
 .item{
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--color);
-    padding: 20px;
     text-align: center;
+    background-color: crimson;
 }
 
-.item:nth-child(1){
-    background: crimson;
-    grid-column: 2/4 ;
-    grid-row: 3/5;
+.header{
+    grid-area: header;
 }
 
-.item:nth-child(2){
-    background: cadetblue;
+.main{
+    background-color: yellow;
+    grid-area: main;
 }
 
-.item:nth-child(3){
-    background: darkblue;
-    grid-area: 1/2/2/4;
+.sidebar{
+    background-color: blue;
+    grid-area: sidebar;
 }
 
-.item:nth-child(4){
-    background: green;
-    grid-column: span 2;
+.footer{
+    background-color: green;
+    grid-area: footer;
 }
 
-.item:nth-child(5){
-    background: purple;
+
+@media screen and (max-width:800px) {
+    .container{
+        grid-template-areas: 
+        "header header header header header"
+        "main main main sidebar sidebar"
+        "main main main sidebar sidebar"
+        "main main main sidebar sidebar"
+        "footer footer footer footer footer";
+    }
 }
 
-.item:nth-child(6){
-    background: yellowgreen;
-    grid-row: span 2;
+
+@media screen and (max-width:500px) {
+    .container{
+        grid-template-columns: auto;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas: 
+        "header"
+        "main"
+        "main"
+        "sidebar"
+        "footer"
+        
+    }
 }

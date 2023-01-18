@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid Areas</title>
+    <title>Formulario de contacto</title>
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./normalize.css">
 </head>
 <body>
-    <section class="grid">
-        <div class="grid_item header">Header</div>
-        <div class="grid_item main">Main</div>
-        <div class="grid_item sidebar">Sidebar</div>
-        <div class="grid_item footer">Footer</div>
+    <section class="contact">
+        <figure class="contact_img">
+            <img class="img" src="./img/inlove.svg" alt="Contact image, two people">
+        </figure>
+        <form action="" class="contact_form">
+            <h2 class="form_title">We keep in touch</h2>
+            <input type="text" placeholder="Ingresa tu nombre:" class="form_input" ></input>
+            <input type="email" placeholder="Ingresa tu email:" class="form_input" ></input>
+            <textarea placeholder="Mensaje" class="form_input form_input-area" cols="30" rows="10"></textarea>
+            <button type="submit" class="form_button">Enviar ahora</button>
+        </form>
     </section>
 </body>
 </html>

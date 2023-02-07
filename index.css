@@ -18,87 +18,54 @@
 }
 
 
-.container{
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 body{
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 20px;
 }
 
-.cards{
+.gallery{
+    height: 100%;
+    width: 90%;
+}
+
+.gallery_frame{
+    padding: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap: 40px
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
 }
 
-.card{
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 0 6px rgba(0 0, 0, 0.5);
-    border-radius: 10px;
+.gallery_title{
+    font-size: 1.5rem;
+    padding: 20px;
 }
 
-.card::before{
+.gallery_title::after{
     content: "";
     display: block;
+    width: 15%;
+    border-bottom: 4px solid slateblue;
+    margin-top: 20px;
+}
+
+.gallery_item{
+    min-width: 200px;
+    min-height: 200px;
     width: 100%;
     height: 200px;
-    background-image: var(--url);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 10px 10px 0 0;
+    object-fit: cover;
 }
 
-
-.c2::before{
-    background-image: url(./img/mk2.jpg);
-}
-
-.c3::before{
-    background-image: url(./img/mk3.jpg);
-}
-
-.card_container{
-    padding: 30px 20px;
-    background: #fafafa;
-    border-radius: 0 0 10px 10px;
-    flex-grow: 1;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.card_name{
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.card_text{
-    display: flex;
-    align-items: flex-start;
+.item_img{
     height: 100%;
-}
-
-.card_copy{
-    font-weight: 30px;
-    margin-bottom: 30px;
-}
-
-.card_cta{
-    background-color: var(--color-primary);
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    display: block;
-    padding: 15px 0;
-    border-radius: 10px;
+    width: 100%;
+    object-fit: fill;
 }

@@ -27,10 +27,14 @@ body{
 
 .container{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: c
-    enter;
+    flex-direction: column;
+    margin: 20px auto;
+
+
+    width: 90%;
+    height: 90%;
+    border: 1px solid black;
+    overflow: hidden;
 }
 
 .element{
@@ -45,30 +49,22 @@ body{
     align-items: center;
     justify-content: center;
 
-}
-
-.element:nth-child(1){
-    transform: translate(0px, 200px);
-}
-
-.element:nth-child(2){
-
-    /* 
-        grados: 0 - 360deg
-        radians: 0 - 6.28319 rad
-        gradians: 0 - 400 grad
-        turn: 0 - 1 turn 
-    */
-
-    transform: rotate(90deg);
+    transition: all 1s;
+    position: relative;
+    left: 0;
 }
 
 
-.element:nth-child(3){
-    transform: scale(.5);
+.spiderman{
+    width: 50%;
+    transition: all 1s;
+    position: relative;
+    right: 0;
+    top: 0;
+
 }
 
-.element:nth-child(4){
-    transform: skew(30deg);
-
+.container:hover .spiderman{
+    right: 80px;
+    top: 30px;
 }

@@ -4,18 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LandingPage</title>
+    <title>Menú Hamburguesa</title>
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./normalize.css">
 </head>
 <body>
   <div class="container">
-    <section class="container_grid">
-      <div class="grid_texts">
-        <h2 class="grid_title">Less is more</h2>
-        <h2 class="grid_title title-transform">Minimalism</h2>
+    <nav class="nav">
+      <div class="nav_container">
+        <label for="check" class="nav_icon">
+          <img src="./img/bx-menu.svg" class="nav_img">
+        </label>
+        <input type="checkbox" id="check" class="nav_checkbox">
+        <div class="nav_items">
+          <a href="#" class="nav_link">Inicio</a>
+          <a href="#" class="nav_link">Acerca de</a>
+          <a href="#" class="nav_link">Contacto</a>
+          <a href="#" class="nav_link">Blog</a>
+        </div>
       </div>
-    </section>
+    </nav>
   </div>
 </body>
 </html>

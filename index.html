@@ -5,24 +5,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Libreta</title>
+  <title>Modal</title>
   <link rel="stylesheet" href="./index.css">
   <link rel="stylesheet" href="./normalize.css">
 </head>
 
 <body>
-  <div class="container">
-    
-    <div class="book">
-      <h2 class="title">Hola mi nombre es Brayan</h2>
-      <p class="paragraph">Estudiante de M@C</p>
-      <div class="picture">
-    </div>
-    <div class="circle"></div>
-    <div class="lines"></div>
-    <div class="rondana"></div>
+  <a href="#modal" class="link modal_open">Menú</a>
+  <section class="modal" id="modal">
+    <div class="modal_container">
+      <figure class="modal_picture">
+        <img src="./img/horse.jpg" alt="Horse" class="modal_img">
+      </figure>
+      <div class="modal_texts">
+        <h2 class="modal_title"></h2>
+        <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo architecto quaerat iste alias quod neque ipsum. Accusamus, tempora placeat, repudiandae soluta aut asperiores modi earum, ducimus vitae illo saepe culpa beatae ipsum sunt est iure. Suscipit eius iste, optio incidunt quis repellat hic possimus tenetur natus consequuntur facere soluta veniam</p>
+      </div>
 
-  </div>
+      <a href="#" class="modal_close link">X</a>
+    </div>
+  </section>
 </body>
 
 </html>
